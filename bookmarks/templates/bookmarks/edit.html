@@ -1,7 +1,7 @@
 {% extends 'bookmarks/layout.html' %}
 
 {% block head %}
-  {% with page_title="Edit bookmark - Linkding" %}
+  {% with page_title="Edit bookmark - "|add:custom_name %}
     {{ block.super }}
   {% endwith %}
 {% endblock %}

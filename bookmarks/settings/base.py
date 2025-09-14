@@ -73,6 +73,7 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "bookmarks.context_processors.toasts",
                 "bookmarks.context_processors.app_version",
+                "bookmarks.context_processors.branding_settings",
             ],
         },
     },
@@ -102,6 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Website context path.
 LD_CONTEXT_PATH = os.getenv("LD_CONTEXT_PATH", "")
+
+# Custom branding options
+LD_CUSTOM_NAME = os.getenv("LD_CUSTOM_NAME", "linkding")
+LD_OPENSEARCH_SHORT_NAME = os.getenv("LD_OPENSEARCH_SHORT_NAME", "LINKDING")
+LD_OPENSEARCH_DESCRIPTION = os.getenv("LD_OPENSEARCH_DESCRIPTION", "LINKDING")
+
+LD_SHOW_SHARED_BY_USERNAME = os.getenv("LD_SHOW_SHARED_BY_USERNAME", "True").lower() in ("true", "1", "yes")
 
 LOGIN_URL = "/" + LD_CONTEXT_PATH + "login"
 LOGIN_REDIRECT_URL = "/" + LD_CONTEXT_PATH + "bookmarks"
