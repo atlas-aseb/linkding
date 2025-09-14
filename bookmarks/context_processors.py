@@ -1,6 +1,7 @@
 from bookmarks import utils
 from bookmarks.models import Toast
 from django.conf import settings
+from django.templatetags.static import static
 
 
 def toasts(request):
@@ -23,7 +24,20 @@ def app_version(request):
 
 
 def branding_settings(request):
+    # Handle custom logo (URL or static file path)
+    custom_logo = settings.LD_CUSTOM_LOGO
+    if custom_logo:
+        if custom_logo.startswith(('http://', 'https://')):
+            logo_url = custom_logo  # Use URL directly
+        else:
+            logo_url = static(custom_logo)  # Use as static file path
+    else:
+        logo_url = static('logo.png')  # Default logo
+
     return {
         "custom_name": settings.LD_CUSTOM_NAME,
+        "custom_logo": logo_url,
         "show_shared_by_username": settings.LD_SHOW_SHARED_BY_USERNAME,
+        "show_login_button": settings.LD_SHOW_LOGIN_BUTTON,
+        "show_shared_user_filter": settings.LD_SHOW_SHARED_USER_FILTER,
     }

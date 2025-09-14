@@ -29,6 +29,7 @@
 
     {# Filters #}
     <div class="side-panel col-1 hide-md">
+      {% if show_shared_user_filter %}
       <section aria-labelledby="user-heading">
         <div class="section-header">
           <h2 id="user-heading">User</h2>
@@ -38,6 +39,7 @@
           <br>
         </div>
       </section>
+      {% endif %}
       {% include 'bookmarks/tag_section.html' %}
     </div>
   </div>
