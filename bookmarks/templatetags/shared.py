@@ -1,4 +1,5 @@
 import re
+from django.conf import settings
 
 import bleach
 import markdown
@@ -109,6 +110,12 @@ def humanize_relative_date(value):
     if value in (None, ""):
         return ""
     return utils.humanize_relative_date(value)
+
+
+@register.filter
+def append_title_suffix(value: str):
+    title_suffix = settings.LD_CUSTOM_NAME
+    return f"{value} - {title_suffix}" if value else title_suffix
 
 
 @register.tag
