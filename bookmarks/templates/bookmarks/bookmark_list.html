@@ -110,9 +110,11 @@
                   {% endif %}
                 {% else %}
                   {# Shared bookmark actions #}
+                  {% if show_shared_by_username %}
                   <span>Shared by
                   <a href="?{% replace_query_param user=bookmark_item.owner.username %}">{{ bookmark_item.owner.username }}</a>
                 </span>
+                {% endif %}
                 {% endif %}
                 {% if bookmark_item.has_extra_actions %}
                   <div class="extra-actions">

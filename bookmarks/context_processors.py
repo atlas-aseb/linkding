@@ -1,5 +1,6 @@
 from bookmarks import utils
 from bookmarks.models import Toast
+from django.conf import settings
 
 
 def toasts(request):
@@ -19,3 +20,10 @@ def toasts(request):
 
 def app_version(request):
     return {"app_version": utils.app_version}
+
+
+def branding_settings(request):
+    return {
+        "custom_name": settings.LD_CUSTOM_NAME,
+        "show_shared_by_username": settings.LD_SHOW_SHARED_BY_USERNAME,
+    }

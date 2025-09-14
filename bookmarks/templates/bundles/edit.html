@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 
 {% block head %}
-  {% with page_title="Edit bundle - Linkding" %}
+  {% with page_title="Edit bundle - "|add:custom_name %}
     {{ block.super }}
   {% endwith %}
 {% endblock %}

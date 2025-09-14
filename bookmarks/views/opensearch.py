@@ -1,5 +1,6 @@
 from django.urls import reverse
 from django.shortcuts import render
+from django.conf import settings
 
 
 def opensearch(request):
@@ -12,6 +13,8 @@ def opensearch(request):
         {
             "base_url": base_url,
             "bookmarks_url": bookmarks_url,
+            "opensearch_short_name": settings.LD_OPENSEARCH_SHORT_NAME,
+            "opensearch_description": settings.LD_OPENSEARCH_DESCRIPTION,
         },
         content_type="application/opensearchdescription+xml",
         status=200,
