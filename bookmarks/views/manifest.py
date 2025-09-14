@@ -4,13 +4,13 @@ from django.conf import settings
 
 def manifest(request):
     response = {
-        "short_name": "linkding",
-        "name": "linkding",
-        "description": "Self-hosted bookmark service",
+        "short_name": settings.LD_CUSTOM_NAME,
+        "name": settings.LD_CUSTOM_NAME,
+        "description": settings.LD_OG_DESCRIPTION,
         "start_url": "bookmarks",
         "display": "standalone",
         "scope": "/" + settings.LD_CONTEXT_PATH,
-        "theme_color": "#5856e0",
+        "theme_color": settings.LD_PRIMARY_COLOR,
         "background_color": (
             "#161822" if request.user_profile.theme == "dark" else "#ffffff"
         ),
