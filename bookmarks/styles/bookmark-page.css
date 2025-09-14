@@ -7,6 +7,13 @@
   --bookmark-actions-hover-color: var(--text-color);
   --bookmark-actions-weight: 400;
   --bulk-actions-bg-color: var(--gray-50);
+  --powered-by-color: var(--secondary-text-color);
+}
+
+.powered-by {
+  text-align: center;
+  color: var(--powered-by-color);
+  margin-top: var(--unit-4);
 }
 
 /* Bookmark page grid */
