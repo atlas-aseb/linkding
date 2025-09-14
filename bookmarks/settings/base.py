@@ -114,6 +114,7 @@ LD_OG_DESCRIPTION = os.getenv("LD_OG_DESCRIPTION", "Self-hosted bookmark service
 
 LD_THEME_COLOR_LIGHT = os.getenv("LD_THEME_COLOR_LIGHT", "#5856e0")
 LD_THEME_COLOR_DARK = os.getenv("LD_THEME_COLOR_DARK", "#161822")
+LD_PRIMARY_COLOR = os.getenv("LD_PRIMARY_COLOR", "#5856e0")
 
 LD_SHOW_SHARED_BY_USERNAME = os.getenv("LD_SHOW_SHARED_BY_USERNAME", "True").lower() in ("true", "1", "yes")
 
