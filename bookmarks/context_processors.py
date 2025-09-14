@@ -25,20 +25,20 @@ def app_version(request):
 
 def branding_settings(request):
     # Handle custom logo (URL or static file path)
-    custom_logo = settings.LD_CUSTOM_LOGO
-    if custom_logo:
-        if custom_logo.startswith(('http://', 'https://')):
-            logo_url = custom_logo  # Use URL directly
+    def resolve_static(path, fallback):
+        if path:
+            if path.startswith(('http://', 'https://')):
+                return path  # Use URL directly
+            else:
+                return static(path)  # Use as static file path
         else:
-            logo_url = static(custom_logo)  # Use as static file path
-    else:
-        logo_url = static('logo.png')  # Default logo
+            return static(fallback)  # Default logo
 
     return {
         "custom_name": settings.LD_CUSTOM_NAME,
-        "custom_logo": logo_url,
+        "custom_logo": resolve_static(settings.LD_CUSTOM_LOGO, "logo.png"),
         "og_description": settings.LD_OG_DESCRIPTION,
-        "og_image": settings.LD_OG_IMAGE,
+        "og_image": resolve_static(settings.LD_OG_IMAGE, ""),
         "theme_color_light": settings.LD_THEME_COLOR_LIGHT,
         "theme_color_dark": settings.LD_THEME_COLOR_DARK,
         "show_shared_by_username": settings.LD_SHOW_SHARED_BY_USERNAME,
