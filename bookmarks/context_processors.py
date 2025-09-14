@@ -26,4 +26,6 @@ def branding_settings(request):
     return {
         "custom_name": settings.LD_CUSTOM_NAME,
         "show_shared_by_username": settings.LD_SHOW_SHARED_BY_USERNAME,
+        "show_login_button": settings.LD_SHOW_LOGIN_BUTTON,
+        "show_shared_user_filter": settings.LD_SHOW_SHARED_USER_FILTER,
     }

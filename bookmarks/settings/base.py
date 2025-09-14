@@ -111,6 +111,10 @@ LD_OPENSEARCH_DESCRIPTION = os.getenv("LD_OPENSEARCH_DESCRIPTION", "LINKDING")
 
 LD_SHOW_SHARED_BY_USERNAME = os.getenv("LD_SHOW_SHARED_BY_USERNAME", "True").lower() in ("true", "1", "yes")
 
+LD_SHOW_LOGIN_BUTTON = os.getenv("LD_SHOW_LOGIN_BUTTON", "True").lower() in ("true", "1", "yes")
+
+LD_SHOW_SHARED_USER_FILTER = os.getenv("LD_SHOW_SHARED_USER_FILTER", "True").lower() in ("true", "1", "yes")
+
 LOGIN_URL = "/" + LD_CONTEXT_PATH + "login"
 LOGIN_REDIRECT_URL = "/" + LD_CONTEXT_PATH + "bookmarks"
 LOGOUT_REDIRECT_URL = "/" + LD_CONTEXT_PATH + "login"

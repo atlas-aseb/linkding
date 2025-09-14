@@ -58,7 +58,7 @@
   <div class="d-flex justify-between">
     <a href="{% url 'linkding:root' %}" class="app-link d-flex align-center">
       <img class="app-logo" src="{% static 'logo.png' %}" alt="Application logo">
-      <span class="app-name">{{ custom_name|upper }}</span>
+      <span class="app-name">{{ custom_name }}</span>
     </a>
     <nav>
       {% if request.user.is_authenticated %}
@@ -66,7 +66,9 @@
         {% include 'bookmarks/nav_menu.html' %}
       {% else %}
         {# Otherwise show login link #}
+        {% if show_login_button %}
         <a href="{% url 'login' %}" class="btn btn-link">Login</a>
+        {% endif %}
       {% endif %}
     </nav>
   </div>
