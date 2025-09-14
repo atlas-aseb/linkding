@@ -37,6 +37,10 @@ def branding_settings(request):
     return {
         "custom_name": settings.LD_CUSTOM_NAME,
         "custom_logo": logo_url,
+        "og_description": settings.LD_OG_DESCRIPTION,
+        "og_image": settings.LD_OG_IMAGE,
+        "theme_color_light": settings.LD_THEME_COLOR_LIGHT,
+        "theme_color_dark": settings.LD_THEME_COLOR_DARK,
         "show_shared_by_username": settings.LD_SHOW_SHARED_BY_USERNAME,
         "show_login_button": settings.LD_SHOW_LOGIN_BUTTON,
         "show_shared_user_filter": settings.LD_SHOW_SHARED_USER_FILTER,
