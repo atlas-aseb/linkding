@@ -1,17 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
-    <g transform="matrix(1,0,0,1,-70.3466,-70.3466)">
-        <g transform="matrix(1.18075,0,0,1.18075,-1257.39,-1386.74)">
-            <circle cx="1314.98" cy="1424.52" r="190.496" style="fill:rgb(88,86,224);"/>
-        </g>
-        <g transform="matrix(0.793058,0,0,0.793058,-739.034,-836.215)">
-            <g transform="matrix(0.707351,0.706862,-0.706862,0.707351,1331.93,-512.804)">
-                <path d="M1244.39,1293.95L1244.39,1493.59C1244.39,1493.59 1243.58,1561.48 1319.29,1562.47C1395.27,1563.46 1394.17,1493.59 1394.17,1493.59L1394.17,1293.95" style="fill:none;stroke:white;stroke-width:34.15px;"/>
-            </g>
-            <g transform="matrix(-0.710067,-0.704134,0.704134,-0.710067,1284.12,3366.41)">
-                <path d="M1244.39,1293.95L1244.39,1493.59C1244.39,1493.59 1243.58,1561.48 1319.29,1562.47C1395.27,1563.46 1394.17,1493.59 1394.17,1493.59L1394.17,1293.95" style="fill:none;stroke:white;stroke-width:34.15px;"/>
-            </g>
-        </g>
-    </g>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="#121212"/>
+<path d="M141 218.333V355.667C141 360.085 144.582 363.667 149 363.667H210.109C214.527 363.667 218.109 360.085 218.109 355.667V218.333C218.109 213.915 221.69 210.333 226.109 210.333H286.333C290.752 210.333 294.333 213.915 294.333 218.333V355.667C294.333 360.085 297.915 363.667 302.333 363.667H363C367.418 363.667 371 360.085 371 355.667V157C371 152.582 367.418 149 363 149H294.333H225.667C221.248 149 217.667 152.582 217.667 157V202.333C217.667 206.752 214.085 210.333 209.667 210.333H149C144.582 210.333 141 213.915 141 218.333Z" fill="#FF6507" stroke="#FF6507"/>
 </svg>
